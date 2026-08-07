@@ -96,3 +96,68 @@ text-shadow:
 0 10px 18px rgba(255,240,170,.35);
 
 }
+
+.leftDoor,
+.rightDoor{
+
+position:absolute;
+
+top:0;
+
+width:50%;
+
+height:100%;
+
+transition:2s ease;
+
+}
+
+.leftDoor{
+
+left:0;
+
+background:inherit;
+
+border-right:1px solid rgba(255,255,255,.25);
+
+}
+
+.rightDoor{
+
+right:0;
+
+background:inherit;
+
+border-left:1px solid rgba(0,0,0,.25);
+
+}
+
+.goldDoor{
+
+position:relative;
+
+overflow:hidden;
+
+cursor:pointer;
+
+}
+
+.goldDoor.open .leftDoor{
+
+transform:translateX(-105%);
+
+}
+
+.goldDoor.open .rightDoor{
+
+transform:translateX(105%);
+
+}
+
+.title{
+
+position:absolute;
+
+z-index:10;
+
+}
