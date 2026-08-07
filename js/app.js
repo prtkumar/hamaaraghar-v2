@@ -1,15 +1,7 @@
-const door = document.querySelector(".goldDoor");
+const door=document.getElementById("door");
 
 door.addEventListener("click",()=>{
 
-door.style.transform="scale(.97)";
-door.style.filter="brightness(1.35)";
-
-setTimeout(()=>{
-
-door.style.transform="scale(1)";
-door.style.filter="brightness(1)";
-
-},700);
+door.classList.add("open");
 
 });
