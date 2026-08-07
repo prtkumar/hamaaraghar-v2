@@ -201,3 +201,95 @@ z-index:10;
     background:linear-gradient(#8a6b35,#d5b678);
     clip-path:polygon(40% 0,60% 0,100% 100%,0 100%);
 }
+
+.sky{
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+to bottom,
+#08263f 0%,
+#365d7d 35%,
+#d7b05f 70%,
+#f4e7b8 100%);
+z-index:1;
+}
+
+.sun{
+position:absolute;
+width:180px;
+height:180px;
+left:50%;
+top:12%;
+transform:translateX(-50%);
+border-radius:50%;
+background:#ffd95c;
+filter:blur(6px);
+box-shadow:0 0 120px #ffd95c;
+z-index:2;
+}
+
+.mountains{
+position:absolute;
+bottom:34%;
+left:0;
+right:0;
+height:180px;
+background:
+linear-gradient(#56686f,#2b3134);
+clip-path:polygon(
+0 100%,
+18% 55%,
+35% 82%,
+50% 40%,
+66% 84%,
+82% 52%,
+100% 100%);
+z-index:3;
+}
+
+.tree{
+position:absolute;
+width:8px;
+height:120px;
+background:#2c1705;
+left:58%;
+bottom:34%;
+z-index:4;
+}
+
+.tree::before{
+content:"";
+position:absolute;
+width:90px;
+height:90px;
+left:-41px;
+top:-55px;
+border-radius:50%;
+background:#244b25;
+}
+
+.path{
+position:absolute;
+left:50%;
+bottom:0;
+width:120px;
+height:36%;
+transform:translateX(-50%);
+background:
+linear-gradient(#b9965a,#efe0bb);
+clip-path:polygon(46% 0,54% 0,100% 100%,0 100%);
+z-index:4;
+}
+
+.mist{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+height:40%;
+background:
+linear-gradient(transparent,#fff5cf);
+opacity:.25;
+z-index:5;
+}
