@@ -18,13 +18,27 @@
     position:relative;
 }
 
+.door{
+    width:50%;
+    height:100%;
+    overflow:hidden;
+    position:relative;
+}
+
 .door img{
     position:absolute;
     top:0;
     width:200%;
     height:100%;
     object-fit:cover;
-    transition:transform 2s ease;
+}
+
+.left img{
+    left:0;
+}
+
+.right img{
+    left:-100%;
 }
 
 /* LEFT HALF */
