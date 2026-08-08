@@ -1,122 +1,56 @@
-/* ===== MASTER GATE ===== */
-
-#entrance{
-    z-index:10;
-    overflow:hidden;
-    background:#000;
-    transition:opacity 1.4s ease;
-}
-
-#entrance.hide{
-    opacity:0;
-    pointer-events:none;
-}
-
 #gate{
-
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    transform-origin:center;
-
-    transition:
-    transform 2.2s ease,
-    filter 2s ease;
-
-    cursor:pointer;
-
-}
-
-#gate:hover{
-
-    filter:
-    brightness(1.08)
-    saturate(1.08);
-
-}
-
-/* जब द्वार खुलना शुरू हो */
-
-#gate.open{
-
-    transform:scale(1.03);
-
-}
-
-/* स्वर्णिम प्रकाश */
-
-#entrance::after{
-
-content:"";
 
 position:absolute;
-
 inset:0;
 
-background:
+display:flex;
 
-radial-gradient(
-
-circle at center,
-
-rgba(255,225,120,.22),
-
-transparent 65%
-
-);
-
-opacity:0;
-
-transition:opacity 2s ease;
-
-pointer-events:none;
+cursor:pointer;
 
 }
 
-#gate.open + #overlay{
+.door{
 
-opacity:.35;
+width:50%;
+height:100%;
 
-}
+overflow:hidden;
 
-#entrance.open::after{
-
-opacity:1;
-
-}
-
-/* हल्की साँस जैसी चमक */
-
-@keyframes gateGlow{
-
-0%{
-
-filter:brightness(1);
+transition:transform 1.8s ease;
 
 }
 
-50%{
+.door img{
 
-filter:brightness(1.08);
+width:200%;
+height:100%;
 
-}
-
-100%{
-
-filter:brightness(1);
+object-fit:cover;
 
 }
 
+.left img{
+
+left:0;
+position:relative;
+
 }
 
-#gate{
+.right img{
 
-animation:gateGlow 8s ease-in-out infinite;
+right:100%;
+position:relative;
+
+}
+
+.open .left{
+
+transform:translateX(-100%);
+
+}
+
+.open .right{
+
+transform:translateX(100%);
 
 }
