@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 900 1600"
+     width="900"
+     height="1600">
+
+<defs>
+
+<linearGradient id="gold"
+x1="0"
+y1="0"
+x2="0"
+y2="1">
+
+<stop offset="0%" stop-color="#fff7cf"/>
+<stop offset="18%" stop-color="#f7df8b"/>
+<stop offset="42%" stop-color="#ddb03b"/>
+<stop offset="72%" stop-color="#b97d16"/>
+<stop offset="100%" stop-color="#fff0bf"/>
+
+</linearGradient>
+
+<linearGradient id="shine"
+x1="0"
+y1="0"
+x2="1"
+y2="0">
+
+<stop offset="0%" stop-color="rgba(255,255,255,.55)"/>
+<stop offset="50%" stop-color="rgba(255,255,255,0)"/>
+<stop offset="100%" stop-color="rgba(255,255,255,.30)"/>
+
+</linearGradient>
+
+<filter id="shadow">
+
+<feDropShadow
+dx="0"
+dy="15"
+stdDeviation="20"
+flood-opacity=".35"/>
+
+</filter>
+
+</defs>
+
+<!-- LEFT DOOR -->
+
+<path
+id="leftDoor"
+
+fill="url(#gold)"
+
+filter="url(#shadow)"
+
+d="
+M60 1540
+L60 320
+A390 390 0 0 1 450 60
+L450 1540
+Z
+"/>
+
+<!-- RIGHT DOOR -->
+
+<path
+
+id="rightDoor"
+
+fill="url(#gold)"
+
+filter="url(#shadow)"
+
+d="
+M840 1540
+L840 320
+A390 390 0 0 0 450 60
+L450 1540
+Z
+"/>
+
+</svg>
