@@ -441,3 +441,54 @@ text-shadow:0 3px 12px black;
     visibility:hidden;
     pointer-events:none;
 }
+
+/* ========= DOUBLE DOOR ========= */
+
+#gate{
+    position:absolute;
+    inset:0;
+    display:flex;
+    overflow:hidden;
+    z-index:20;
+}
+
+.door{
+    width:50%;
+    height:100%;
+    overflow:hidden;
+    position:relative;
+}
+
+.door img{
+    position:absolute;
+    width:200%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 2s ease;
+}
+
+.left img{
+    left:0;
+}
+
+.right img{
+    right:0;
+}
+
+.left{
+    transform-origin:left center;
+    transition:transform 2s ease;
+}
+
+.right{
+    transform-origin:right center;
+    transition:transform 2s ease;
+}
+
+#gate.open .left{
+    transform:translateX(-105%);
+}
+
+#gate.open .right{
+    transform:translateX(105%);
+}
