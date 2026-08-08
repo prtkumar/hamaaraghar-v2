@@ -58,3 +58,12 @@
     transform:scale(1);
     animation:slowZoom 18s linear forwards;
 }
+
+@keyframes slowZoom{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.12);
+    }
+}
