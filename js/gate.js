@@ -1,21 +1,19 @@
-const entrance = document.getElementById("entrance");
-const gate = document.getElementById("gate");
+const entrance=document.getElementById("entrance");
+const gate=document.getElementById("gate");
+const home=document.getElementById("home");
 
-gate.addEventListener("click",()=>{
+gate.onclick=()=>{
 
-    gate.classList.add("open");
-    entrance.classList.add("open");
+gate.classList.add("open");
 
-    setTimeout(()=>{
+entrance.classList.add("open");
 
-        entrance.classList.add("hide");
+setTimeout(()=>{
 
-    },1800);
+entrance.classList.add("hide");
 
-    setTimeout(()=>{
+home.classList.add("show");
 
-        window.location.href="home.html";
+},2200);
 
-    },3000);
-
-});
+}
