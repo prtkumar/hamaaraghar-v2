@@ -1,5 +1,13 @@
-const door = document.getElementById("door");
+const gate = document.getElementById("gate");
 
-door.addEventListener("click", () => {
-    door.classList.toggle("open");
+gate.addEventListener("click",()=>{
+
+    gate.classList.add("open");
+
+    setTimeout(()=>{
+
+        window.location.href="home.html";
+
+    },1600);
+
 });
