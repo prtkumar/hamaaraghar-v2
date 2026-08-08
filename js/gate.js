@@ -1,19 +1,20 @@
-const entrance=document.getElementById("entrance");
-const gate=document.getElementById("gate");
-const home=document.getElementById("home");
+const entrance = document.getElementById("entrance");
+const gate = document.getElementById("gate");
 
-gate.onclick=()=>{
+let opened = false;
 
-gate.classList.add("open");
+function openGate() {
 
-entrance.classList.add("open");
+    if (opened) return;
+    opened = true;
 
-setTimeout(()=>{
+    gate.classList.add("open");
 
-entrance.classList.add("hide");
-
-home.classList.add("show");
-
-},2200);
+    setTimeout(() => {
+        entrance.classList.add("hide");
+    }, 1800);
 
 }
+
+gate.addEventListener("click", openGate);
+gate.addEventListener("touchstart", openGate);
