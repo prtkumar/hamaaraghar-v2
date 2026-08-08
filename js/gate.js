@@ -1,6 +1,8 @@
 const gate = document.getElementById("gate");
-const leftDoor = document.querySelector(".left");
-const rightDoor = document.querySelector(".right");
+const entrance = document.getElementById("entrance");
+
+const left = document.querySelector(".left");
+const right = document.querySelector(".right");
 
 let opened = false;
 
@@ -12,11 +14,15 @@ function openGate(){
     if(opened) return;
     opened = true;
 
-    leftDoor.style.transform = "translateX(-100%)";
-    rightDoor.style.transform = "translateX(100%)";
+    left.style.transform = "translateX(-105%)";
+    right.style.transform = "translateX(105%)";
 
     setTimeout(()=>{
-        gate.style.display = "none";
-    },2000);
+        entrance.style.opacity = "0";
+    },1800);
+
+    setTimeout(()=>{
+        entrance.style.display = "none";
+    },2600);
 
 }
