@@ -1,9 +1,22 @@
 const gate = document.getElementById("gate");
+const leftDoor = document.querySelector(".left");
+const rightDoor = document.querySelector(".right");
 
-gate.addEventListener("click", () => {
-    gate.classList.toggle("open");
-});
+let opened = false;
 
-gate.addEventListener("touchstart", () => {
-    gate.classList.toggle("open");
-}, { passive: true });
+gate.addEventListener("click", openGate);
+gate.addEventListener("touchstart", openGate, { passive: true });
+
+function openGate(){
+
+    if(opened) return;
+    opened = true;
+
+    leftDoor.style.transform = "translateX(-100%)";
+    rightDoor.style.transform = "translateX(100%)";
+
+    setTimeout(()=>{
+        gate.style.display = "none";
+    },2000);
+
+}
