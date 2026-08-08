@@ -1,37 +1,50 @@
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/gate.css">
-<link rel="stylesheet" href="css/home.css">
-#home{
-    position:fixed;
-    inset:0;
-    overflow:hidden;
-    z-index:1;
+#welcome{
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: url("../assets/home-scene.webp") center center / cover no-repeat;
+
+    color: #ffffff;
+    text-align: center;
+    padding: 24px;
+
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 1.5s ease, transform 12s ease;
 }
 
-#homeScene{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
+#world.show #welcome{
+    opacity: 1;
+    transform: scale(1);
 }
 
-#homeOverlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.18);
+#welcome::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.35);
 }
 
-#homeTitle{
-    position:absolute;
-    top:8%;
-    left:50%;
-    transform:translateX(-50%);
-    color:white;
-    text-align:center;
+#welcome h1,
+#welcome p{
+    position: relative;
+    z-index: 2;
 }
 
-#homeTitle h1{
-    font-size:3rem;
-    font-weight:300;
+#welcome h1{
+    font-size: clamp(42px,7vw,72px);
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#welcome p{
+    max-width: 700px;
+    font-size: clamp(18px,3vw,28px);
+    line-height: 1.7;
 }
