@@ -1,6 +1,7 @@
-alert("JS Loaded");
 const gate = document.getElementById("gate");
 
-gate.onclick = function () {
-    alert("Gate Clicked");
-};
+gate.addEventListener("click",function(){
+
+gate.classList.add("open");
+
+});
