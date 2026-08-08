@@ -1,20 +1,21 @@
-const gate = document.getElementById("gate");
 const entrance = document.getElementById("entrance");
+const gate = document.getElementById("gate");
 
-gate.addEventListener("click", () => {
+gate.addEventListener("click",()=>{
 
     gate.classList.add("open");
+    entrance.classList.add("open");
 
-    setTimeout(() => {
+    setTimeout(()=>{
 
         entrance.classList.add("hide");
 
-        setTimeout(() => {
+    },1800);
 
-            window.location.href = "home.html";
+    setTimeout(()=>{
 
-        },1200);
+        window.location.href="home.html";
 
-    },1600);
+    },3000);
 
 });
