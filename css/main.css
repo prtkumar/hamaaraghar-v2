@@ -1,149 +1,318 @@
+/* ===========================
+   HAMAARA GHAR V4
+   MAIN.CSS
+=========================== */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html,
 body{
-width:100%;
-height:100%;
-overflow:hidden;
-background:#070603;
-font-family:Georgia,serif;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#050403;
+    font-family:Georgia, serif;
 }
 
 #app{
-position:relative;
-width:100vw;
-height:100vh;
-overflow:hidden;
+    position:relative;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
 }
 
-/* WORLD */
+/* ===========================
+   WORLD
+=========================== */
 
 #world{
-position:absolute;
-inset:0;
-z-index:1;
-overflow:hidden;
+    position:absolute;
+    inset:0;
+    z-index:1;
 }
+
+/* Morning Sky */
 
 .sky{
-position:absolute;
-inset:0;
-background:
-linear-gradient(
-180deg,
-#08233d 0%,
-#355b79 28%,
-#d3b164 68%,
-#f7edd0 100%);
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #10253f 0%,
+        #325f86 25%,
+        #d4b15d 72%,
+        #f6ebcf 100%
+    );
+
 }
+
+/* Sun */
 
 .sun{
+
+    position:absolute;
+
+    width:160px;
+    height:160px;
+
+    border-radius:50%;
+
+    left:50%;
+    top:9%;
+
+    transform:translateX(-50%);
+
+    background:#ffe27a;
+
+    box-shadow:
+    0 0 40px #ffe27a,
+    0 0 90px rgba(255,226,122,.75);
+
+}
+
+/* Mountains */
+
+.mountains{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    bottom:34%;
+
+    height:170px;
+
+    background:
+    linear-gradient(#4e5d63,#2c3135);
+
+    clip-path:polygon(
+    0 100%,
+    10% 70%,
+    24% 88%,
+    38% 52%,
+    52% 92%,
+    67% 60%,
+    82% 82%,
+    100% 100%);
+
+}
+
+/* Mist */
+
+.mist{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    bottom:0;
+
+    height:45%;
+
+    background:
+    linear-gradient(
+    transparent,
+    rgba(255,247,220,.35));
+
+}
+
+/* Path */
+
+.path{
+
+    position:absolute;
+
+    left:50%;
+    bottom:0;
+
+    width:140px;
+    height:42%;
+
+    transform:translateX(-50%);
+
+    background:
+    linear-gradient(
+    #d6b26a,
+    #f2dfb5);
+
+    clip-path:
+    polygon(
+    46% 0,
+    54% 0,
+    100% 100%,
+    0 100%);
+
+}
+
+/* Tree */
+
+.tree{
+
+    position:absolute;
+
+    width:12px;
+    height:125px;
+
+    background:#3b2308;
+
+    left:58%;
+    bottom:31%;
+
+}
+
+.tree::before{
+
+content:"";
+
 position:absolute;
-width:180px;
-height:180px;
+
+width:92px;
+height:92px;
+
+left:-40px;
+top:-58px;
+
 border-radius:50%;
-left:50%;
-top:10%;
-transform:translateX(-50%);
-background:#ffd95c;
-box-shadow:0 0 90px #ffd95c;
-filter:blur(4px);
-opacity:.95;
-}
 
-/* GATE */
-
-#gateScene{
-position:absolute;
-inset:0;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:10;
-}
-
-.goldDoor{
-
-position:relative;
-
-width:min(92vw,520px);
-
-aspect-ratio:9/16;
-
-border-radius:240px 240px 36px 36px;
-
-overflow:hidden;
+background:#2d5f34;
 
 box-shadow:
-0 0 60px rgba(255,210,70,.25);
+0 0 20px rgba(0,0,0,.25);
 
 }
 
-.leftDoor,
-.rightDoor{
+/* ===========================
+   GATE
+=========================== */
 
-position:absolute;
+#gate{
 
-top:0;
+    position:absolute;
 
-width:50%;
+    inset:0;
 
-height:100%;
+    display:flex;
 
-background:
-linear-gradient(
-180deg,
-#fff5bf,
-#f2d35e,
-#c8941f,
-#f9e79d);
+    justify-content:center;
 
-transition:1.8s;
+    align-items:center;
+
+    z-index:10;
+
 }
 
-.leftDoor{
+.door{
+
+    position:relative;
+
+    width:min(90vw,500px);
+
+    aspect-ratio:9/16;
+
+    overflow:hidden;
+
+    border-radius:220px 220px 30px 30px;
+
+    box-shadow:
+
+    0 0 45px rgba(255,215,80,.25),
+
+    inset 0 0 25px rgba(255,255,255,.35),
+
+    inset 0 -30px 35px rgba(0,0,0,.25);
+
+}
+
+/* Door Panels */
+
+.door-left,
+.door-right{
+
+    position:absolute;
+
+    top:0;
+
+    width:50%;
+    height:100%;
+
+    transition:1.6s ease;
+
+    background:
+    linear-gradient(
+    to bottom,
+    #fff6c8,
+    #f4d36c,
+    #ca9322,
+    #fff0b0);
+
+}
+
+.door-left{
 
 left:0;
 
-border-right:1px solid rgba(0,0,0,.25);
+border-right:
+1px solid rgba(0,0,0,.25);
 
 }
 
-.rightDoor{
+.door-right{
 
 right:0;
 
-border-left:1px solid rgba(255,255,255,.15);
+border-left:
+1px solid rgba(255,255,255,.2);
 
 }
 
-.title{
+/* Title */
+
+.door-title{
 
 position:absolute;
 
 left:50%;
-
 top:50%;
 
 transform:translate(-50%,-50%);
 
-color:white;
-
-font-size:3rem;
+font-size:clamp(42px,7vw,70px);
 
 font-weight:bold;
 
-letter-spacing:2px;
+color:#6c4700;
 
 text-shadow:
-0 4px 8px rgba(0,0,0,.5);
+
+0 2px 0 #fff9dd,
+
+0 6px 14px rgba(0,0,0,.35);
 
 z-index:20;
 
-text-align:center;
+white-space:nowrap;
+
+}
+
+/* OPEN */
+
+.door.open .door-left{
+
+transform:translateX(-102%);
+
+}
+
+.door.open .door-right{
+
+transform:translateX(102%);
 
 }
