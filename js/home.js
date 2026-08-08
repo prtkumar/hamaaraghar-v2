@@ -1,20 +1,13 @@
-window.addEventListener("load", () => {
+window.onload = () => {
 
-  const gate = document.getElementById("gate");
-  const fade = document.getElementById("fade");
+    const left = document.querySelector(".left");
+    const right = document.querySelector(".right");
 
-  gate.addEventListener("click", () => {
+    document.getElementById("gate").onclick = () => {
 
-    gate.style.transition = "transform 2s ease";
-    gate.style.transform = "scale(1.15)";
-    gate.style.opacity = "0";
+        left.classList.add("open");
+        right.classList.add("open");
 
-    fade.style.opacity = "1";
+    };
 
-    setTimeout(() => {
-      fade.style.opacity = "0";
-    }, 1200);
-
-  });
-
-});
+};
