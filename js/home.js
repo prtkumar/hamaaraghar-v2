@@ -1,37 +1,31 @@
 // ===== HAMAARA GHAR =====
 
 const world = document.getElementById("world");
-const gate = world.querySelector("img");
+const gate = document.getElementById("gate");
 const fade = document.getElementById("fade");
-const ui = document.getElementById("ui");
 
 let opened = false;
 
-gate.addEventListener("click", openGate);
-gate.addEventListener("touchstart", openGate, { passive: true });
+function openGate() {
 
-function openGate(e){
-
-    e.preventDefault();
-
-    if(opened) return;
+    if (opened) return;
     opened = true;
 
-    gate.style.transition =
-        "transform 2.4s ease, opacity 2.4s ease";
-
-    gate.style.transform = "scale(1.08)";
+    gate.style.transition = "transform 2.2s ease, opacity 2.2s ease";
+    gate.style.transform = "scale(1.05)";
     gate.style.opacity = "0";
 
-    fade.style.transition = "opacity 2s ease";
-    fade.style.opacity = "0";
+    fade.style.transition = "opacity 2.2s ease";
+    fade.style.opacity = "1";
 
     setTimeout(() => {
 
-        world.style.display = "none";
+        gate.style.display = "none";
+        fade.style.opacity = "0";
 
-        document.body.classList.add("entered");
-document.body.style.overflow = "auto";
-    },2200);
+    }, 2200);
 
 }
+
+world.addEventListener("click", openGate);
+world.addEventListener("touchstart", openGate, { passive: true });
