@@ -31,7 +31,7 @@ function openGate(e){
         world.style.display = "none";
 
         document.body.classList.add("entered");
-
+document.body.style.overflow = "auto";
     },2200);
 
 }
