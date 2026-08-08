@@ -1,52 +1,58 @@
+/* ===========================
+   GATE
+=========================== */
+
 #gate{
-
-position:absolute;
-inset:0;
-
-display:flex;
-
-cursor:pointer;
-
+    position:absolute;
+    inset:0;
+    display:flex;
+    overflow:hidden;
+    cursor:pointer;
+    z-index:100;
 }
 
 .door{
-
-width:50%;
-height:100%;
-
-overflow:hidden;
-
-transition:transform 1.8s ease;
-
+    width:50%;
+    height:100%;
+    overflow:hidden;
+    position:relative;
 }
 
 .door img{
-
-width:200%;
-height:100%;
-
-object-fit:cover;
-
+    position:absolute;
+    top:0;
+    width:200%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 2s ease;
 }
+
+/* LEFT HALF */
 
 .left img{
-
-left:0;
-position:relative;
-
+    left:0;
 }
+
+.left{
+    transform-origin:left center;
+}
+
+/* RIGHT HALF */
 
 .right img{
-
-right:100%;
-position:relative;
-
+    right:0;
 }
 
+.right{
+    transform-origin:right center;
+}
+
+/* OPEN ANIMATION */
+
 .open .left{
-transform:translateX(-120%);
+    transform:translateX(-105%);
 }
 
 .open .right{
-transform:translateX(120%);
+    transform:translateX(105%);
 }
