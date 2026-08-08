@@ -37,3 +37,27 @@ inset:0;
 z-index:100;
 
 }
+
+#world{
+
+opacity:0;
+transform:scale(1.05);
+
+transition:
+opacity 2s ease,
+transform 10s ease;
+
+}
+
+#world.show{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+#entrance{
+
+transition:opacity .8s ease;
+
+}
