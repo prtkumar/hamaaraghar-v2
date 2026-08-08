@@ -420,3 +420,24 @@ letter-spacing:2px;
 text-shadow:0 3px 12px black;
 
 }
+
+/* ===== GATE OPEN ===== */
+
+#gate{
+    transition:
+        transform 1.8s ease,
+        opacity 1.8s ease;
+    transform-origin:center;
+    cursor:pointer;
+}
+
+#gate.open{
+    transform:scale(1.03);
+    opacity:0;
+}
+
+#entrance.hide{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
