@@ -12,9 +12,9 @@ function openGate() {
 
     setTimeout(() => {
         entrance.classList.add("hide");
-    }, 1800);
+    }, 2000);
 
 }
 
 gate.addEventListener("click", openGate);
-gate.addEventListener("touchstart", openGate);
+gate.addEventListener("touchstart", openGate, { passive: true });
