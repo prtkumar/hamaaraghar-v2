@@ -500,3 +500,7 @@ text-shadow:0 3px 12px black;
 .right{
     transition:transform 2s ease;
 }
+
+#entrance{
+    transition:opacity .8s ease;
+}
