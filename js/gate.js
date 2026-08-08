@@ -20,10 +20,3 @@ gate.addEventListener("click", () => {
 
 });
 
-setTimeout(()=>{
-
-document
-.getElementById("scene")
-.style.transform="scale(1.12)";
-
-},500);
