@@ -492,3 +492,11 @@ text-shadow:0 3px 12px black;
 #gate.open .right{
     transform:translateX(105%);
 }
+
+.left{
+    transition:transform 2s ease;
+}
+
+.right{
+    transition:transform 2s ease;
+}
