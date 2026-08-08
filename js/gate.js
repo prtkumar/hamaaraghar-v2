@@ -19,3 +19,11 @@ gate.addEventListener("click", () => {
     }, 600);
 
 });
+
+setTimeout(()=>{
+
+document
+.getElementById("scene")
+.style.transform="scale(1.12)";
+
+},500);
