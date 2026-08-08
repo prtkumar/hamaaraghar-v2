@@ -80,3 +80,43 @@ letter-spacing:2px;
 text-shadow:0 2px 20px rgba(0,0,0,.6);
 
 }
+
+/* ===== DOUBLE DOOR ===== */
+
+#gate{
+    position:absolute;
+    inset:0;
+    display:flex;
+    z-index:10;
+}
+
+.door{
+    width:50%;
+    height:100%;
+    overflow:hidden;
+    position:relative;
+}
+
+.door img{
+    position:absolute;
+    width:200%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 2s ease;
+}
+
+.left img{
+    left:0;
+}
+
+.right img{
+    right:0;
+}
+
+.left.open img{
+    transform:translateX(-100%);
+}
+
+.right.open img{
+    transform:translateX(100%);
+}
