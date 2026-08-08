@@ -2,7 +2,7 @@
     position:fixed;
     inset:0;
     overflow:hidden;
-    background:#000;
+    z-index:1;
 }
 
 #homeScene{
@@ -11,107 +11,24 @@
     width:100%;
     height:100%;
     object-fit:cover;
-    animation:zoom 20s ease-in-out infinite alternate;
 }
 
-@keyframes zoom{
-
-from{
-
-transform:scale(1);
-
-}
-
-to{
-
-transform:scale(1.05);
-
-}
-
-}
-
-#fade{
+#homeOverlay{
     position:absolute;
     inset:0;
-
-    background:linear-gradient(
-        to bottom,
-        rgba(0,0,0,.08),
-        rgba(0,0,0,.20)
-    );
-
-    opacity:0;
-    pointer-events:none;
-
-    transition:opacity 2.2s ease;
+    background:rgba(0,0,0,.18);
 }
 
-#ui{
-
-position:absolute;
-
-top:5vh;
-
-left:0;
-
-width:100%;
-
-text-align:center;
-
-pointer-events:none;
-
-}
-
-#ui h1{
-
-font-size:3rem;
-
-color:white;
-
-font-weight:300;
-
-letter-spacing:2px;
-
-text-shadow:0 2px 20px rgba(0,0,0,.6);
-
-}
-
-/* ===== DOUBLE DOOR ===== */
-
-#gate{
+#homeTitle{
     position:absolute;
-    inset:0;
-    display:flex;
-    z-index:10;
+    top:8%;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    text-align:center;
 }
 
-.door{
-    width:50%;
-    height:100%;
-    overflow:hidden;
-    position:relative;
-}
-
-.door img{
-    position:absolute;
-    width:200%;
-    height:100%;
-    object-fit:cover;
-    transition:transform 2s ease;
-}
-
-.left img{
-    left:0;
-}
-
-.right img{
-    right:0;
-}
-
-.left.open img{
-    transform:translateX(-100%);
-}
-
-.right.open img{
-    transform:translateX(100%);
+#homeTitle h1{
+    font-size:3rem;
+    font-weight:300;
 }
