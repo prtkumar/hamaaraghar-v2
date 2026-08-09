@@ -1,6 +1,6 @@
-/* ===========================
+/* ==========================
    GATE
-=========================== */
+========================== */
 
 #gate{
     position:absolute;
@@ -16,13 +16,8 @@
     height:100%;
     overflow:hidden;
     position:relative;
-}
 
-.door{
-    width:50%;
-    height:100%;
-    overflow:hidden;
-    position:relative;
+    transition:transform 1.8s ease-in-out;
 }
 
 .door img{
@@ -33,14 +28,6 @@
     object-fit:cover;
 }
 
-.left img{
-    left:0;
-}
-
-.right img{
-    left:-100%;
-}
-
 /* LEFT HALF */
 
 .left img{
@@ -48,7 +35,7 @@
 }
 
 .left{
-    transform-origin:left center;
+    transform-origin:right center;
 }
 
 /* RIGHT HALF */
@@ -58,15 +45,15 @@
 }
 
 .right{
-    transform-origin:right center;
+    transform-origin:left center;
 }
 
 /* OPEN ANIMATION */
 
 .open .left{
-    transform:translateX(-105%);
+    transform:translateX(-100%);
 }
 
 .open .right{
-    transform:translateX(105%);
+    transform:translateX(100%);
 }
